@@ -1,7 +1,7 @@
 {
   "name": "@mobily/firestore-fp",
   "description": "🔥 Functional helpers for convenient work with Firestore.",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "scripts": {
     "clean": "rm -rf ./dist && rm -f ./tsconfig.tsbuildinfo",
     "build": "tsc --outDir ./dist",
@@ -31,7 +31,6 @@
     "url": "https://github.com/mobily/firestore-fp.git"
   },
   "devDependencies": {
-    "@firebase/firestore-types": "^1.10.1",
     "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
@@ -44,6 +43,9 @@
     "prettier": "^2.0.2",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@firebase/firestore-types": "^1.10.1"
   },
   "cacheDirectories": [
     "node_modules"
