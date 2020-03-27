@@ -1,6 +1,6 @@
 {
   "name": "@mobily/firestore-fp",
-  "description": "",
+  "description": "🔥 Functional helpers for convenient work with Firestore.",
   "version": "0.1.0",
   "scripts": {
     "clean": "rm -rf ./dist",
