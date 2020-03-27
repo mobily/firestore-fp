@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "tsc --outDir ./dist",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "generate:contributors": "yarn all-contributors generate",
     "generate:package": "bash ./scripts/package.sh"
