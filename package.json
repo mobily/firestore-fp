@@ -1,7 +1,7 @@
 {
   "name": "@mobily/firestore-fp",
   "description": "🔥 Functional helpers for convenient work with Firestore.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "clean": "rm -rf ./dist && rm -f ./tsconfig.tsbuildinfo",
     "build": "tsc --outDir ./dist",
