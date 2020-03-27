@@ -2,7 +2,7 @@
   firestore-fp
 </h1>
 
-<blockquote align="center">
+<blockquote>
   🔥 Functional helpers for convenient work with Firestore.
 </blockquote>
 
