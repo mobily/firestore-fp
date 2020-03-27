@@ -1,0 +1,51 @@
+{
+  "name": "@mobily/firestore-fp",
+  "description": "",
+  "version": "0.1.0",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "tsc --outDir ./dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "generate:contributors": "yarn all-contributors generate",
+    "generate:package": "bash ./scripts/package.sh"
+  },
+  "engines": {
+    "node": ">= 10.*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "functional-programming",
+    "firebase",
+    "firestore"
+  ],
+  "author": "mobily",
+  "homepage": "https://github.com/mobily/firestore-fp#readme",
+  "bugs": "https://github.com/mobily/firestore-fp/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobily/firestore-fp.git"
+  },
+  "devDependencies": {
+    "@firebase/firestore-types": "^1.10.1",
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "all-contributors-cli": "^6.14.0",
+    "coveralls": "^3.0.11",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.2.0",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
+}

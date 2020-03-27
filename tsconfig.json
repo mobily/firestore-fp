@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015"],
+    "forceConsistentCasingInFileNames": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2015",
+    "module": "commonjs",
+    "allowJs": false,
+    "composite": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": "src"
+  },
+  "exclude": ["**/*.test.ts", "playground"],
+  "include": [
+    "./src/**/*"
+  ]
+}
