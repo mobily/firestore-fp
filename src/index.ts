@@ -18,3 +18,10 @@ export { startAfter } from './startAfter'
 export { endBefore } from './endBefore'
 export { onSnapshot } from './onSnapshot'
 export { withConverter } from './withConverter'
+
+export type { DataConverter } from './withConverter'
+export type {
+  DocumentReference,
+  CollectionReference,
+  Query,
+} from '@firebase/firestore-types'
