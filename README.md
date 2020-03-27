@@ -2,9 +2,9 @@
   firestore-fp
 </h1>
 
-<blockquote>
+<h3 align="center">
   🔥 Functional helpers for convenient work with Firestore.
-</blockquote>
+</h3>
 
 <p align="center">
   <a href="https://travis-ci.com/mobily/firestore-fp">
