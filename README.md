@@ -1,6 +1,6 @@
-# firestore-fp &middot; [![Build Status](https://img.shields.io/travis/com/mobily/firestore-fp.svg?style=flat-square)](https://travis-ci.com/mobily/firestore-fp) [![npm](https://img.shields.io/npm/v/@mobily/firestore-fp.svg?style=flat-square)](https://www.npmjs.com/package/@mobily/firestore-fp)  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/mobily/firestore-fp/blob/master/LICENSE)
+# 🔥 firestore-fp &middot; [![Build Status](https://img.shields.io/travis/com/mobily/firestore-fp.svg?style=flat-square)](https://travis-ci.com/mobily/firestore-fp) [![npm](https://img.shields.io/npm/v/@mobily/firestore-fp.svg?style=flat-square)](https://www.npmjs.com/package/@mobily/firestore-fp)  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/mobily/firestore-fp/blob/master/LICENSE)
 
-🔥 Functional helpers for convenient work with Firestore.
+> Functional helpers for convenient work with Firestore.
 
 <img src="https://raw.githubusercontent.com/mobily/firestore-fp/master/assets/example.gif" alt="firestore-fp example" width="640">
 
