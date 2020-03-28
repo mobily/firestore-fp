@@ -1,6 +1,7 @@
 export { pipe } from './pipe'
 export { query } from './query'
 export { collection } from './collection'
+export { collectionGroup } from './collectionGroup'
 export { get } from './get'
 export { set } from './set'
 export { doc } from './doc'
