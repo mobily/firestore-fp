@@ -1,4 +1,5 @@
 import {
+  FirebaseFirestore,
   CollectionReference,
   DocumentReference,
   Query,
@@ -313,36 +314,39 @@ export type Pipe = {
 }
 
 export type Piped = {
-  <T, R>(result: UnaryFunction<T, R>): R
-  <T, A, R>(op1: UnaryFunction<T, A>, result: UnaryFunction<A, R>): R
-  <T, A, B, R>(
-    op1: UnaryFunction<T, A>,
+  <R>(result: UnaryFunction<FirebaseFirestore, R>): R
+  <A, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
+    result: UnaryFunction<A, R>,
+  ): R
+  <A, B, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
     op2: UnaryFunction<A, B>,
     result: UnaryFunction<B, R>,
   ): R
-  <T, A, B, C, R>(
-    op1: UnaryFunction<T, A>,
+  <A, B, C, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
     op2: UnaryFunction<A, B>,
     op3: UnaryFunction<B, C>,
     result: UnaryFunction<C, R>,
   ): R
-  <T, A, B, C, D, R>(
-    op1: UnaryFunction<T, A>,
+  <A, B, C, D, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
     op2: UnaryFunction<A, B>,
     op3: UnaryFunction<B, C>,
     op4: UnaryFunction<C, D>,
     result: UnaryFunction<D, R>,
   ): R
-  <T, A, B, C, D, E, R>(
-    op1: UnaryFunction<T, A>,
+  <A, B, C, D, E, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
     op2: UnaryFunction<A, B>,
     op3: UnaryFunction<B, C>,
     op4: UnaryFunction<C, D>,
     op5: UnaryFunction<D, E>,
     result: UnaryFunction<E, R>,
   ): R
-  <T, A, B, C, D, E, F, R>(
-    op1: UnaryFunction<T, A>,
+  <A, B, C, D, E, F, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
     op2: UnaryFunction<A, B>,
     op3: UnaryFunction<B, C>,
     op4: UnaryFunction<C, D>,
@@ -350,8 +354,8 @@ export type Piped = {
     op6: UnaryFunction<E, F>,
     result: UnaryFunction<F, R>,
   ): R
-  <T, A, B, C, D, E, F, G, R>(
-    op1: UnaryFunction<T, A>,
+  <A, B, C, D, E, F, G, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
     op2: UnaryFunction<A, B>,
     op3: UnaryFunction<B, C>,
     op4: UnaryFunction<C, D>,
@@ -360,8 +364,8 @@ export type Piped = {
     op7: UnaryFunction<F, G>,
     result: UnaryFunction<G, R>,
   ): R
-  <T, A, B, C, D, E, F, G, H, R>(
-    op1: UnaryFunction<T, A>,
+  <A, B, C, D, E, F, G, H, R>(
+    op1: UnaryFunction<FirebaseFirestore, A>,
     op2: UnaryFunction<A, B>,
     op3: UnaryFunction<B, C>,
     op4: UnaryFunction<C, D>,
