@@ -101,7 +101,7 @@ const takeUserMessages = (userId: string) => q(messages, userIdEq(userId), get)
 Combine `collection` and `doc` helpers.
 
 ```typescript
-import { collection, doc, get, update, pipe } from '@mobily/firestore-fp'
+import { collection, doc, get, update, add, pipe } from '@mobily/firestore-fp'
 import { q } from './utils'
 
 interface Task {
