@@ -87,7 +87,7 @@ interface Message {
 }
 
 const tasks = collection<Task>('tasks')
-const messages = collection<User>('messages')
+const messages = collection<Message>('messages')
 
 const userIdEq = where('userId', '==')
 
