@@ -26,7 +26,7 @@ or with `npm`
 npm install @mobily/firestore-fp --save
 ```
 
-### Quickstart
+### Prerequisites
 
 Create a new function by using a `query` factory function to consume your Firestore queries.
 
