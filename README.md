@@ -86,8 +86,13 @@ interface Message {
   userId: string
 }
 
+interface Room {
+  name: string
+}
+
 const tasks = collection<Task>('tasks')
 const messages = collection<Message>('messages')
+const rooms = collection<Room>('rooms')
 
 const userIdEq = where('userId', '==')
 
@@ -96,6 +101,10 @@ const takeUserTasks = (userId: string) => q(tasks, userIdEq(userId), get)
 
 // return Promise<QuerySnapshot<Message>>
 const takeUserMessages = (userId: string) => q(messages, userIdEq(userId), get)
+
+// return Promise<QuerySnapshot<Room>>
+const takeUserRooms = (userId: string) =>
+  q(rooms, userIdEq(userId) /* error, property 'userId' doesn't exist on type 'Room' */, get)
 ```
 
 Combine `collection` and `doc` helpers.
