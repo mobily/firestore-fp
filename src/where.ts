@@ -10,29 +10,31 @@ import { curry4 } from './internal/curry4'
 type Acc<T> = Query<T> | CollectionReference<T>
 
 type Curry4 = {
-  (fieldPath: string | FieldPath): (
+  <T>(fieldPath: Extract<keyof T, string>): (
     opStr: WhereFilterOp,
-  ) => (value: any) => <T>(acc: Acc<T>) => Query<T>
-  (fieldPath: string | FieldPath, opStr: WhereFilterOp): (
-    value: any,
-  ) => <T>(acc: Acc<T>) => Query<T>
-  (fieldPath: string | FieldPath, opStr: WhereFilterOp, value: any): <T>(
+  ) => <K extends keyof T>(value: T[K]) => <X>(acc: Acc<X & T>) => Query<X>
+  <T>(fieldPath: Extract<keyof T, string>, opStr: WhereFilterOp): <
+    K extends keyof T
+  >(
+    value: T[K],
+  ) => <X>(acc: Acc<X & T>) => Query<X>
+  <T, K extends keyof T>(fieldPath: K, opStr: WhereFilterOp, value: T[K]): (
     acc: Acc<T>,
   ) => Query<T>
-  <T>(
-    fieldPath: string | FieldPath,
+  <T, K extends keyof T>(
+    fieldPath: T,
     opStr: WhereFilterOp,
-    value: any,
+    value: T[K],
     acc: Acc<T>,
   ): Query<T>
 }
 
 export const where: Curry4 = curry4(
-  <T>(
+  (
     fieldPath: string | FieldPath,
     opStr: WhereFilterOp,
     value: any,
-    acc: Acc<T>,
+    acc: Acc<any>,
   ): any => {
     return acc.where(fieldPath, opStr, value)
   },
