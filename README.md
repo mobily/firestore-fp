@@ -110,7 +110,7 @@ const takeUserRooms = (userId: string) =>
 Combine `collection` and `doc` helpers.
 
 ```typescript
-import { collection, doc, get, update, remove, add, pipe } from '@mobily/firestore-fp'
+import { collection, doc, get, update, remove, add, set, pipe } from '@mobily/firestore-fp'
 import { q } from './utils'
 
 interface Task {
@@ -130,6 +130,11 @@ const removeTask = (id: string) => q(tasksDoc(id), remove)
 
 // return Promise<DocumentReference<Task>>
 const addTask = (task: Task) => q(tasks, add(task))
+
+// return Promise<void>
+const setTask = (id: string, task: Task) =>
+  q(tasksDoc(id), set({ ...task, createdAt: new Date() }))
+  /* ⬆️ error: object literal may only specify known properties, and 'createdAt' does not exist in type 'Task' */
 
 // return Promise<void>
 const toggleTaskDone = (id: string, isDone: boolean) =>
