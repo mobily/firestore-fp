@@ -2,7 +2,7 @@
 
 > Functional helpers for convenient work with Firestore.
 
-<img src="https://raw.githubusercontent.com/mobily/firestore-fp/master/assets/example.gif" alt="firestore-fp example" width="640">
+<img src="https://raw.githubusercontent.com/mobily/firestore-fp/master/assets/example.gif" alt="firestore-fp example">
 
 ## Features
 
