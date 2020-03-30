@@ -110,7 +110,7 @@ const takeUserRooms = (userId: string) =>
 Combine `collection` and `doc` helpers.
 
 ```typescript
-import { collection, doc, get, update, add, pipe } from '@mobily/firestore-fp'
+import { collection, doc, get, update, remove, add, pipe } from '@mobily/firestore-fp'
 import { q } from './utils'
 
 interface Task {
@@ -126,11 +126,14 @@ const tasksDoc = (id: string) => pipe(tasks, doc(id))
 const takeTask = (id: string) => q(tasksDoc(id), get)
 
 // return Promise<void>
-const toggleTaskDone = (id: string, isDone: boolean) =>
-  q(tasksDoc(id), update({ isDone } /* ◀️ Partial<Task> */))
+const removeTask = (id: string) => q(tasksDoc(id), remove)
 
 // return Promise<DocumentReference<Task>>
 const addTask = (task: Task) => q(tasks, add(task))
+
+// return Promise<void>
+const toggleTaskDone = (id: string, isDone: boolean) =>
+  q(tasksDoc(id), update({ isDone } /* ◀️ Partial<Task> */))
 ```
 
 Compound queries.
