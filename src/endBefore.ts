@@ -9,7 +9,7 @@ type Curry2 = {
   <T>(valuesOrSnapshot: ValuesOrSnapshot<T>, acc: Acc<T>): Query<T>
 }
 
-export const startAfter: Curry2 = curry2(
+export const endBefore: Curry2 = curry2(
   <T>(valuesOrSnapshot: ValuesOrSnapshot<T>, acc: Acc<T>): any => {
     return Array.isArray(valuesOrSnapshot)
       ? acc.endBefore(...valuesOrSnapshot)
