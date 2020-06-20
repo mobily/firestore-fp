@@ -3,7 +3,10 @@ import {
   CollectionReference,
   DocumentReference,
   Query,
+  DocumentSnapshot,
 } from '@firebase/firestore-types'
+
+export type ValuesOrSnapshot<T> = any[] | DocumentSnapshot<T>
 
 export type UnaryFunction<T, R> = (source: T) => R
 
